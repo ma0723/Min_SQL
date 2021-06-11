@@ -1,0 +1,7 @@
+SELECT ANIMAL_ID, NAME 
+-- 아이디와 이름을 조회하는 SQL
+FROM ANIMAL_INS
+WHERE NOT INTAKE_CONDITION = 'Aged'
+-- 젊은 동물
+ORDER BY ANIMAL_ID
+-- 아이디 순으로 조회

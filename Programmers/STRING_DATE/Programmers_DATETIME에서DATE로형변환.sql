@@ -1,0 +1,9 @@
+SELECT ANIMAL_ID, NAME, DATE_FORMAT(DATETIME, '%Y-%m-%d') AS 날짜
+-- 모든 레코드
+-- 각 동물의 아이디와 이름, 들어온 날짜
+-- DATE_FORMAT(DATETIME, '%Y-%m-%d')
+-- DATENAME(PART, DATETIME) (문자열), DATEPART(PART, DATETIME) (정수)
+-- HOUR() DAY() MONTH() YEAR()
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
+-- 아이디 순으로 조회

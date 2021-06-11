@@ -1,0 +1,11 @@
+SELECT A.NAME, A.DATETIME
+-- 이름과 보호 시작일
+FROM ANIMAL_INS A LEFT JOIN ANIMAL_OUTS B
+ON A.ANIMAL_ID = B.ANIMAL_ID
+-- ANIMAL_OUTS 테이블의 ANIMAL_ID는 ANIMAL_INS의 ANIMAL_ID의 외래 키
+WHERE B.ANIMAL_ID IS NULL
+-- 아직 입양을 못 간 동물 중(ANIMAL_OUTS에 없는 경우)
+ORDER BY A.DATETIME
+-- 보호 시작일 순으로 조회
+LIMIT 3
+-- 가장 오래 보호소에 있었던 동물 3마리

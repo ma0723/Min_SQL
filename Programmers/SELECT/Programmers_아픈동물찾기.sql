@@ -1,0 +1,7 @@
+SELECT ANIMAL_ID, NAME
+-- 아이디와 이름을 조회
+FROM ANIMAL_INS
+WHERE INTAKE_CONDITION = 'sick'
+-- 아픈 동물
+ORDER BY ANIMAL_ID
+-- 아이디 순으로 조회

@@ -1,0 +1,6 @@
+SELECT NAME, DATETIME
+-- 이름과 보호 시작일
+FROM ANIMAL_INS
+-- 모든 동물
+ORDER BY ANIMAL_ID DESC
+--  ANIMAL_ID 역순으로

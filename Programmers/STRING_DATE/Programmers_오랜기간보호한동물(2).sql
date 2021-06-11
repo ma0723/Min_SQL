@@ -1,0 +1,12 @@
+SELECT B.ANIMAL_ID, B.NAME
+-- 아이디와 이름을 조회
+FROM ANIMAL_INS A INNER JOIN ANIMAL_OUTS B
+-- 입양을 간 동물 중
+-- INNER JOIN (교집합)
+ON A.ANIMAL_ID = B.ANIMAL_ID
+ORDER BY DATEDIFF(A.DATETIME, B.DATETIME)
+-- DATEDIFF(A.DATETIME, B.DATETIME) 
+-- 보호 기간이 긴 순으로 조회(입양일 - 보호소 들어온날)
+-- DATEDIFF_BIG(경계값)
+LIMIT 2
+-- 보호 기간이 가장 길었던 동물 2마리
